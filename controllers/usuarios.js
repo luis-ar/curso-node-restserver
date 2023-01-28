@@ -33,6 +33,8 @@ const usuariosPut = async (req, res = response) => {
   const usuario = await Usuario.findByIdAndUpdate(id, resto); //encuentre y lo actualiza
   res.json(usuario);
 };
+
+/////////////////////
 const usuariosPost = async (req, res = response) => {
   const { nombre, correo, password, rol } = req.body;
   const usuario = new Usuario({ nombre, correo, password, rol });
